@@ -6,6 +6,6 @@ Router.route('/', function () {
   this.render('moderatorStart');
 });
 
-Router.route('moderatorCreate', function(){
+Router.route('moderator-create', function(){
   this.render('moderatorCreate');
 });
