@@ -8,5 +8,8 @@ Meteor.methods({
           title: null,
           description: null
         });
-    }
+    },
+    'removeSession': function(sessionId){
+        SessionsList.remove({"_id": sessionId});
+    }    
 });

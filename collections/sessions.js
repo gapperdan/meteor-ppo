@@ -1,1 +1,1 @@
-SessionsList = new Mongo.Collection('sessions');
+SessionsList = new Mongo.Collection('sizing_sessions');

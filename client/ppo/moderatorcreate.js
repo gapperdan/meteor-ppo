@@ -10,6 +10,7 @@ Template.moderatorCreate.events({
       console.log("submit prevented!")
   },
   'click .button-cancel': function(){
+      console.log("sessionId="+Session.get("sessionId"));      
       Router.go('/');
   }
 });

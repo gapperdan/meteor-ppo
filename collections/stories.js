@@ -1,1 +1,1 @@
-StoriesList = new Mongo.Collection('stories');
+StoriesList = new Mongo.Collection('sizing_stories');
