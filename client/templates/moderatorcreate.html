@@ -1,7 +1,13 @@
 <template name="moderatorCreate">
     <form>
-      <p>Title: <input type="text" size="24" name="sizingTitle"></p>
-      <p>Description: <textarea rows="3" cols="24" name="sizingDescription"></textarea></p>
+      <p>Title: <input type="text" size="24" name="title"></p>
+      <p>Description: <textarea rows="3" cols="24" name="description"></textarea></p>
+      <p>Size scale:</p>
+      <ul>
+        {{#each player}}
+          <li class="player {{selectedClass}}"> {{name}} : {{score}} </li>
+        {{/each}}
+    </ul>
       <input type="submit" class="button-add enjoy-button" value="Add Size">
       <input type="submit" class="button-start enjoy-button" value="Start Sizing">
       <input type="submit" class="button-cancel enjoy-button" value="Cancel">
