@@ -2,15 +2,7 @@ Template.moderatorCreate.helpers({
   'size': function(){
       // var sessionId = Session.get("sessionId");
       return SessionsList.find({_id: Session.get("sessionId")},{sort: {points: 1}})
-  },
-  'title': function(){
-      console.log("trying to get title for _id="+Session.get("sessionId"));
-      return SessionsList.find({_id: Session.get("sessionId")}, {_id: 0, title: 1});
-  },
-  'description': function(){
-      console.log("trying to get description for _id="+Session.get("sessionId"));
-      return SessionsList.find({_id: Session.get("sessionId")}, {_id: 0, description: 1});
-  },
+  }
 });
 
 Template.moderatorCreate.events({
