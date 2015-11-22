@@ -9,7 +9,7 @@ Template.moderatorCreate.events({
   'submit form': function(event){
       event.preventDefault();
       var title = event.target.title.value;
-      var description = event.target.title.value;
+      var description = event.target.description.value;
       var sessionId = Random.id(24);
       console.log(sessionId);
       Session.set("sessionId", sessionId);
