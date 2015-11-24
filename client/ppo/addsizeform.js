@@ -14,5 +14,15 @@ Template.addSizeForm.events({
       console.log("adding sizePoints="+sizePoints+",sizeDescription="+sizeDescription);
       Meteor.call('updateSessionSize', Session.get("sessionId"), sizePoints, sizeDescription);
       event.target.sizeDescription = '';
+  },
+  'click .cancel': function(event){
+      event.preventDefault();
+      Meteor.call('removeSession', Session.get("sessionId"));
+      Router.go("/");
+      console.log("cancel clicked");
+  },
+  'click .start': function(event){
+      event.preventDefault();
+      console.log("start clicked");
   }
 });
