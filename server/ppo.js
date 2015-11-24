@@ -13,7 +13,7 @@ Meteor.methods({
     'removeSession': function(sessionId){
         SessionsList.remove({"_id": sessionId});
     },
-    'updateSessionSize': function(sessionId, sizePoints, sizeDescription){
-        SessionsList.update({_id: sessionId},{$push: {sizes: {points: sizePoints, description: sizeDescription}}});
+    'updateSessionSize': function(sessionId, points, size){
+        SessionsList.update({_id: sessionId},{$push: {sizes: {points: points, size: size}}});
     }
 });

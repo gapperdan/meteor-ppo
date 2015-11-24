@@ -8,12 +8,10 @@ Template.addSizeForm.events({
   'submit form': function(event){
       event.preventDefault();
       console.log("add clicked");
-      var sizePoints = Number(event.target.sizePoints.value);
-      var sizeDescription = event.target.sizeDescription.value;
-
-      console.log("adding sizePoints="+sizePoints+",sizeDescription="+sizeDescription);
-      Meteor.call('updateSessionSize', Session.get("sessionId"), sizePoints, sizeDescription);
-      event.target.sizeDescription = '';
+      var points = Number(event.target.points.value);
+      var description = event.target.size.value;
+      Meteor.call('updateSessionSize', Session.get("sessionId"), points, description);
+      event.target.desciption = '';
   },
   'click .cancel': function(event){
       event.preventDefault();
