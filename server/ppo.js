@@ -7,7 +7,8 @@ Meteor.methods({
           _id: sessionId,
           title: title,
           description: description,
-          sizes: [ ]
+          sizes: [ ],
+          sizers: [ ]
         });
     },
     'removeSession': function(sessionId){
@@ -15,5 +16,9 @@ Meteor.methods({
     },
     'updateSessionSize': function(sessionId, points, size){
         SessionsList.update({_id: sessionId},{$push: {sizes: {points: points, size: size}}});
+    },
+    'insertSizer': function(sessionId, name){
+        console.log("inserting name="+name);
+        SessionsList.update({_id: sessionId},{$push: {sizers: {name: name}}});
     }
 });
