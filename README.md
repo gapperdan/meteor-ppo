@@ -100,3 +100,9 @@ The goal of this project is to provide a free online platform where distributed 
     ]
 }
 ```
+
+### local links
+#### main page
+http://localhost:3000
+#### join session page
+http://localhost:3000/join-session/id/<mongo-id>
