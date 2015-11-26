@@ -20,5 +20,9 @@ Meteor.methods({
     'insertSizer': function(sessionId, name){
         console.log("inserting name="+name);
         SessionsList.update({_id: sessionId},{$push: {sizers: {name: name}}});
+    },
+    'getHost': function(){
+      console.log("host="+this.connection.httpHeaders.host);
+      return this.connection.httpHeaders.host;
     }
 });

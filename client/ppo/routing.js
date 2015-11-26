@@ -17,6 +17,7 @@ Router.route('add-size', function(){
 Router.route('moderator-session/id/:paramSessionId', function(){
   var paramSessionId = this.params.paramSessionId;
   console.log("paramSessionId="+paramSessionId);
+  console.log("path="+Router.current().url);
   Session.set("sessionId", paramSessionId);
   this.render('moderatorSession');
 });
