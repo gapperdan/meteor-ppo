@@ -1,0 +1,9 @@
+<template name="moderatorSession">
+  <p>{{ sizingSession.title }}</p>
+  <p>Participants: {{sizers.length}}</p>
+  <ul>
+    {{#each sizers}}
+      <li>{{name}}</li>
+    {{/each}}
+  </ul>
+</template>

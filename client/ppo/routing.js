@@ -14,6 +14,13 @@ Router.route('add-size', function(){
   this.render('addSizeForm');
 });
 
+Router.route('moderator-session/id/:paramSessionId', function(){
+  var paramSessionId = this.params.paramSessionId;
+  console.log("paramSessionId="+paramSessionId);
+  Session.set("sessionId", paramSessionId);
+  this.render('moderatorSession');
+});
+
 Router.route('join-session/id/:paramSessionId', function(){
   var paramSessionId = this.params.paramSessionId;
   console.log("paramSessionId="+paramSessionId);
