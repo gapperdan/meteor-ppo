@@ -9,5 +9,22 @@ Template.moderatorSession.helpers({
       var names = _.chain(sizingSession).pluck('sizers').flatten().value();
       //return the sizers array
       return names;
+  },
+  'sessionUrl': function(){
+      return "/session/ids/"+Session.get("sessionId");
+  },
+  'currentStory': function(){
+      return StoriesList.findOne({sessionId: Session.get("sessionId"), sized: false});
+  }
+});
+
+Template.moderatorSession.events({
+  'submit form': function(event){
+      console.log("clicked size-story");
+      event.preventDefault();
+      var description = event.target.description.value;
+      var storyId = Random.id(24);
+      Session.set("storyId", storyId);
+      Meteor.call('insertStory', Session.get("sessionId"), storyId, description);
   }
 });

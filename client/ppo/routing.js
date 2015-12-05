@@ -14,15 +14,14 @@ Router.route('add-size', function(){
   this.render('addSizeForm');
 });
 
-Router.route('moderator-session/id/:paramSessionId', function(){
-  var paramSessionId = this.params.paramSessionId;
-  console.log("paramSessionId="+paramSessionId);
+Router.route('moderator-session/ids/:paramSessionId', function(){
   console.log("path="+Router.current().url);
+  var paramSessionId = this.params.paramSessionId;
   Session.set("sessionId", paramSessionId);
   this.render('moderatorSession');
 });
 
-Router.route('join-session/id/:paramSessionId', function(){
+Router.route('session/ids/:paramSessionId', function(){
   var paramSessionId = this.params.paramSessionId;
   console.log("paramSessionId="+paramSessionId);
   Session.set("sessionId", paramSessionId);

@@ -24,5 +24,16 @@ Meteor.methods({
     'getHost': function(){
       console.log("host="+this.connection.httpHeaders.host);
       return this.connection.httpHeaders.host;
+    },
+    'insertStory': function(sessionId, storyId, description){
+        console.log("insde insertStory");
+        StoriesList.insert({
+          _id: storyId,
+          sessionId: sessionId,
+          description: description,
+          size: null,
+          points: null,
+          sized: false
+        });
     }
 });

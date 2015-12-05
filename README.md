@@ -63,42 +63,13 @@ The goal of this project is to provide a free online platform where distributed 
 {
     "_id": "5t7fd-4rr12-990ea-1dd8d-990ew",
     "session_id": "12345-a3a33-132da-fr456-009de",
-    "stories": [
-        {
-            "id": 1,
-            "description": "ITAA-001: Create a login page",
-            "size": "XS",
-            "points": 1,
-            "sizers": [
-                {
-                    "name": "Mary",
-                    "size": "XS",
-                    "points": 1
-                },
-                {
-                    "name": "Joe",
-                    "size": "S",
-                    "points": 2
-                },
-                {
-                    "name": "Sunil",
-                    "size": null,
-                    "points": null
-                },
-                {
-                    "name": "Harry",
-                    "size": null,
-                    "points": null
-                },
-                {
-                    "name": "Lisa",
-                    "size": null,
-                    "points": null
-                }
-            ]
-        }
-    ]
+    "description": "ITAA-0001: Create a login page",
+    "sized": false,
+    "points": 0,
+    "size": "XS"
 }
+
+
 ```
 
 ### local links

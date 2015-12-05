@@ -1,9 +1,17 @@
 <template name="moderatorSession">
+
   <p>{{ sizingSession.title }}</p>
-  <p>Participants: {{sizers.length}}</p>
+  <p>Session url: {{ sessionUrl }}</p>
+  <p>Participants: {{ sizers.length }}</p>
   <ul>
     {{#each sizers}}
       <li>{{name}}</li>
     {{/each}}
   </ul>
+  <p>Currrent story: {{ currentStory.description }}</p>  
+  <form>
+    <p>Add story for sizing:</p>
+    <p>Story Description: <textarea rows="5" cols="30" name="description"></textarea></p>
+    <input type="submit" class="size-story enjoy-button" value="Size Story">
+  </form>
 </template>

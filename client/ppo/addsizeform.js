@@ -21,7 +21,8 @@ Template.addSizeForm.events({
   },
   'click .start': function(event){
       event.preventDefault();
-      console.log("start clicked");      
-      Router.go("/moderator-session");
+      console.log("start clicked");
+      console.log("session="+Session.get("sessionId"));
+      Router.go("/moderator-session/ids/"+Session.get("sessionId"));
   }
 });
